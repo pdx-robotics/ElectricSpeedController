@@ -3,7 +3,7 @@ repo to store the blueprints, schematic, code, etc. relating to the development 
 
 
 
-Here are some good guides on how to use Eagle Cad
+Here are some good guides on how to use Eagle Cad  
 https://learn.sparkfun.com/tutorials/how-to-install-and-setup-eagle  
 https://learn.sparkfun.com/tutorials/using-eagle-schematic  
 https://learn.sparkfun.com/tutorials/using-eagle-board-layout  
