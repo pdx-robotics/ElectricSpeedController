@@ -1568,6 +1568,12 @@ grid 2.54 mm</description>
 </gates>
 <devices>
 <device name="" package="MA04-1">
+<connects>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="2"/>
+<connect gate="G$1" pin="SDA" pad="1"/>
+<connect gate="G$1" pin="VCC" pad="3"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>

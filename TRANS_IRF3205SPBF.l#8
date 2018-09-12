@@ -1504,6 +1504,17 @@ grid 2.54 mm</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="I2C_OLED_4PIN_HEADER">
+<gates>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>

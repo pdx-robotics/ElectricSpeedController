@@ -1415,21 +1415,15 @@ grid 2.54 mm</description>
 <wire x1="-50.8" y1="5.08" x2="-50.8" y2="7.62" width="0.254" layer="94"/>
 <pin name="SDA" x="-53.34" y="22.86" length="middle"/>
 <pin name="SCL" x="-53.34" y="17.78" length="middle"/>
-<pin name="VCC" x="-53.34" y="12.7" length="middle"/>
-<pin name="GND" x="-53.34" y="7.62" length="middle"/>
 <wire x1="-50.8" y1="7.62" x2="-50.8" y2="12.7" width="0.254" layer="94"/>
 <wire x1="-50.8" y1="12.7" x2="-50.8" y2="17.78" width="0.254" layer="94"/>
 <wire x1="-50.8" y1="17.78" x2="-50.8" y2="22.86" width="0.254" layer="94"/>
 <wire x1="-50.8" y1="22.86" x2="-50.8" y2="25.4" width="0.254" layer="94"/>
-<wire x1="-53.34" y1="22.86" x2="-50.8" y2="22.86" width="0.254" layer="94"/>
 <wire x1="-50.8" y1="22.86" x2="-50.8" y2="17.78" width="0.254" layer="94"/>
-<wire x1="-50.8" y1="17.78" x2="-53.34" y2="17.78" width="0.254" layer="94"/>
-<wire x1="-53.34" y1="17.78" x2="-50.8" y2="17.78" width="0.254" layer="94"/>
 <wire x1="-50.8" y1="17.78" x2="-50.8" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-50.8" y1="12.7" x2="-53.34" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-53.34" y1="12.7" x2="-50.8" y2="12.7" width="0.254" layer="94"/>
 <wire x1="-50.8" y1="12.7" x2="-50.8" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-50.8" y1="7.62" x2="-53.34" y2="7.62" width="0.254" layer="94"/>
+<pin name="GND" x="-53.34" y="7.62" length="middle" direction="pwr"/>
+<pin name="VCC" x="-53.34" y="12.7" length="middle" direction="pwr"/>
 </symbol>
 </symbols>
 <devicesets>
