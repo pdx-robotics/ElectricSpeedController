@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.2">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -924,6 +924,30 @@ grid 2.54 mm</description>
 <rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
 <rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
 </package>
+<package name="3PIN_TERMINAL">
+<wire x1="-5.08" y1="-6.35" x2="5.08" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-6.35" x2="5.08" y2="6.35" width="0.127" layer="21"/>
+<wire x1="5.08" y1="6.35" x2="-5.08" y2="6.35" width="0.127" layer="21"/>
+<text x="3.81" y="0" size="1.27" layer="21" rot="R90" align="bottom-center">3 Pin Terminal</text>
+<wire x1="-5.08" y1="6.35" x2="-5.08" y2="5.715" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="4.445" x2="-5.08" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-0.635" x2="-5.08" y2="-4.445" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-5.715" x2="-5.08" y2="-6.35" width="0.127" layer="21"/>
+<pad name="P$1" x="0" y="5.08" drill="0.8" diameter="1.9304"/>
+<pad name="P$2" x="0" y="0" drill="0.8" diameter="1.9304"/>
+<pad name="P$3" x="0" y="-5.08" drill="0.8" diameter="1.9304"/>
+<text x="1.27" y="5.715" size="0.4064" layer="21" align="bottom-center">A</text>
+<text x="1.27" y="0.635" size="0.4064" layer="21" align="bottom-center">B</text>
+<text x="1.27" y="-4.445" size="0.4064" layer="21" align="bottom-center">C</text>
+<wire x1="-5.08" y1="5.715" x2="-1.27" y2="5.715" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="4.445" x2="-5.08" y2="4.445" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="0.635" x2="-1.27" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-0.635" x2="-1.27" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-4.445" x2="-1.27" y2="-4.445" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-5.715" x2="-1.27" y2="-5.715" width="0.127" layer="21"/>
+<text x="-1.27" y="7.62" size="1.27" layer="25">&gt;Name</text>
+<text x="-1.27" y="6.35" size="1.27" layer="27">&gt;Value</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MOSFET_N">
@@ -1081,6 +1105,15 @@ grid 2.54 mm</description>
 <pin name="GND" x="-7.62" y="-7.62" length="middle" direction="pwr"/>
 <pin name="VCC" x="-7.62" y="-2.54" length="middle" direction="pwr"/>
 </symbol>
+<symbol name="3PIN_TERMIAL">
+<wire x1="-2.54" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<pin name="A" x="-5.08" y="5.08" length="short" direction="out"/>
+<pin name="B" x="-5.08" y="0" length="short" direction="out"/>
+<pin name="C" x="-5.08" y="-5.08" length="short" direction="out"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="IRF3205" prefix="IRF3205" uservalue="yes">
@@ -1229,6 +1262,23 @@ grid 2.54 mm</description>
 <connect gate="G$1" pin="SCL" pad="2"/>
 <connect gate="G$1" pin="SDA" pad="1"/>
 <connect gate="G$1" pin="VCC" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TERMINAL3">
+<gates>
+<gate name="G$1" symbol="3PIN_TERMIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="3PIN_TERMINAL">
+<connects>
+<connect gate="G$1" pin="A" pad="P$1"/>
+<connect gate="G$1" pin="B" pad="P$2"/>
+<connect gate="G$1" pin="C" pad="P$3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6993,924 +7043,531 @@ diameter 5 mm, grid 2.54 mm</description>
 <packages3d>
 <package3d name="CT3216" urn="urn:adsk.eagle:package:23327/2" type="model" library_version="2">
 <description>TANTALUM CAPACITOR</description>
-<packageinstances>
-<packageinstance name="CT3216"/>
-</packageinstances>
 </package3d>
 <package3d name="CT3528" urn="urn:adsk.eagle:package:23325/2" type="model" library_version="2">
 <description>TANTALUM CAPACITOR</description>
-<packageinstances>
-<packageinstance name="CT3528"/>
-</packageinstances>
 </package3d>
 <package3d name="CT6032" urn="urn:adsk.eagle:package:23305/2" type="model" library_version="2">
 <description>TANTALUM CAPACITOR</description>
-<packageinstances>
-<packageinstance name="CT6032"/>
-</packageinstances>
 </package3d>
 <package3d name="CT7343" urn="urn:adsk.eagle:package:25791/1" type="box" library_version="2">
 <description>CAPACITOR
 chip
 tantalum</description>
-<packageinstances>
-<packageinstance name="CT7343"/>
-</packageinstances>
 </package3d>
 <package3d name="B45181A" urn="urn:adsk.eagle:package:23316/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 body 5 x 5 mm, rectangle, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="B45181A"/>
-</packageinstances>
 </package3d>
 <package3d name="B45181B" urn="urn:adsk.eagle:package:23320/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 body 7.6 x 5 mm, rectangle, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="B45181B"/>
-</packageinstances>
 </package3d>
 <package3d name="B45181C" urn="urn:adsk.eagle:package:23306/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 body 12.7 x 7.6 mm, rectangle, grid 10.16 mm</description>
-<packageinstances>
-<packageinstance name="B45181C"/>
-</packageinstances>
 </package3d>
 <package3d name="B45181D" urn="urn:adsk.eagle:package:23308/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 body 12.5 x 12.5 mm, rectangle, grid 10.16 mm</description>
-<packageinstances>
-<packageinstance name="B45181D"/>
-</packageinstances>
 </package3d>
 <package3d name="TT2D4" urn="urn:adsk.eagle:package:23310/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 4 mm, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="TT2D4"/>
-</packageinstances>
 </package3d>
 <package3d name="TT2D4L" urn="urn:adsk.eagle:package:23321/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 4 mm, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="TT2D4L"/>
-</packageinstances>
 </package3d>
 <package3d name="TT2D5" urn="urn:adsk.eagle:package:23300/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 5 mm, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="TT2D5"/>
-</packageinstances>
 </package3d>
 <package3d name="TT2D6" urn="urn:adsk.eagle:package:23303/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 6 mm, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="TT2D6"/>
-</packageinstances>
 </package3d>
 <package3d name="TT2D6L" urn="urn:adsk.eagle:package:23323/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 6 mm, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="TT2D6L"/>
-</packageinstances>
 </package3d>
 <package3d name="TT2D7L" urn="urn:adsk.eagle:package:23329/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 7 mm, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="TT2D7L"/>
-</packageinstances>
 </package3d>
 <package3d name="TT2D7" urn="urn:adsk.eagle:package:23319/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 7 mm, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="TT2D7"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D10" urn="urn:adsk.eagle:package:23302/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 10 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D10"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D11" urn="urn:adsk.eagle:package:23309/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 11 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D11"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D11L" urn="urn:adsk.eagle:package:23312/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 11 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D11L"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D6" urn="urn:adsk.eagle:package:23307/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 6 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D6"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D6L" urn="urn:adsk.eagle:package:23324/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 6 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D6L"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D7" urn="urn:adsk.eagle:package:23314/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 7 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D7"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D7L" urn="urn:adsk.eagle:package:23318/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 7 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D7L"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D9" urn="urn:adsk.eagle:package:23301/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 9 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D9"/>
-</packageinstances>
 </package3d>
 <package3d name="TT5D9L" urn="urn:adsk.eagle:package:23313/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 9 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TT5D9L"/>
-</packageinstances>
 </package3d>
 <package3d name="ETR1" urn="urn:adsk.eagle:package:23322/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 rectangle, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="ETR1"/>
-</packageinstances>
 </package3d>
 <package3d name="ETR2" urn="urn:adsk.eagle:package:23315/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 rectangle, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="ETR2"/>
-</packageinstances>
 </package3d>
 <package3d name="ETR3" urn="urn:adsk.eagle:package:23311/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 rectangle, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="ETR3"/>
-</packageinstances>
 </package3d>
 <package3d name="ETR4" urn="urn:adsk.eagle:package:23317/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 rectangle, grid 10.16 mm</description>
-<packageinstances>
-<packageinstance name="ETR4"/>
-</packageinstances>
 </package3d>
 <package3d name="ETR5" urn="urn:adsk.eagle:package:23328/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 rectangle, grid 10.16 mm</description>
-<packageinstances>
-<packageinstance name="ETR5"/>
-</packageinstances>
 </package3d>
 <package3d name="P128-35" urn="urn:adsk.eagle:package:25807/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR</description>
-<packageinstances>
-<packageinstance name="P128-35"/>
-</packageinstances>
 </package3d>
 <package3d name="P128-40" urn="urn:adsk.eagle:package:23331/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR</description>
-<packageinstances>
-<packageinstance name="P128-40"/>
-</packageinstances>
 </package3d>
 <package3d name="P128-50" urn="urn:adsk.eagle:package:23330/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR</description>
-<packageinstances>
-<packageinstance name="P128-50"/>
-</packageinstances>
 </package3d>
 <package3d name="P128-60" urn="urn:adsk.eagle:package:23337/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR</description>
-<packageinstances>
-<packageinstance name="P128-60"/>
-</packageinstances>
 </package3d>
 <package3d name="TAP5-45" urn="urn:adsk.eagle:package:23333/3" type="model" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 4.5 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TAP5-45"/>
-</packageinstances>
 </package3d>
 <package3d name="TAP5-50" urn="urn:adsk.eagle:package:23335/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 5.0 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TAP5-50"/>
-</packageinstances>
 </package3d>
 <package3d name="TAP5-70" urn="urn:adsk.eagle:package:23332/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 7.0 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TAP5-70"/>
-</packageinstances>
 </package3d>
 <package3d name="TAP5-60" urn="urn:adsk.eagle:package:23334/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 6.0 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TAP5-60"/>
-</packageinstances>
 </package3d>
 <package3d name="TAP5-80" urn="urn:adsk.eagle:package:23338/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 8.0 mm, grid 5.08 mm</description>
-<packageinstances>
-<packageinstance name="TAP5-80"/>
-</packageinstances>
 </package3d>
 <package3d name="085CS_1R" urn="urn:adsk.eagle:package:23383/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors reflow soldering
 SMD (Chip) Standard 085 CS
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="085CS_1R"/>
-</packageinstances>
 </package3d>
 <package3d name="085CS_1W" urn="urn:adsk.eagle:package:23384/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors wave soldering
 SMD (Chip) Standard 085 CS
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="085CS_1W"/>
-</packageinstances>
 </package3d>
 <package3d name="085CS_1AR" urn="urn:adsk.eagle:package:23396/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors reflow soldering
 SMD (Chip) Standard 085 CS
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="085CS_1AR"/>
-</packageinstances>
 </package3d>
 <package3d name="085CS_1AW" urn="urn:adsk.eagle:package:23385/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors wave soldering
 SMD (Chip) Standard 085 CS
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="085CS_1AW"/>
-</packageinstances>
 </package3d>
 <package3d name="139CLL-2R" urn="urn:adsk.eagle:package:23387/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors reflow soldering
 SMD (Chip) Long Life 139 CLL
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="139CLL-2R"/>
-</packageinstances>
 </package3d>
 <package3d name="139CLL-2W" urn="urn:adsk.eagle:package:23386/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors wave soldering
 SMD (Chip) Long Life 139 CLL
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="139CLL-2W"/>
-</packageinstances>
 </package3d>
 <package3d name="139CLL-3R" urn="urn:adsk.eagle:package:23388/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors reflow soldering
 SMD (Chip) Long Life 139 CLL
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="139CLL-3R"/>
-</packageinstances>
 </package3d>
 <package3d name="139CLL-3W" urn="urn:adsk.eagle:package:23390/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors wave soldering
 SMD (Chip) Long Life 139 CLL
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="139CLL-3W"/>
-</packageinstances>
 </package3d>
 <package3d name="140CLH-0810" urn="urn:adsk.eagle:package:23392/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors SMD (Chip)
 Long life base plate, High temperature 140 CLH
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="140CLH-0810"/>
-</packageinstances>
 </package3d>
 <package3d name="140CLH-1010" urn="urn:adsk.eagle:package:23391/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors SMD (Chip)
 Long life base plate, High temperature 140 CLH
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="140CLH-1010"/>
-</packageinstances>
 </package3d>
 <package3d name="140CLH-1014" urn="urn:adsk.eagle:package:23393/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors SMD (Chip)
 Long life base plate, High temperature 140 CLH
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="140CLH-1014"/>
-</packageinstances>
 </package3d>
 <package3d name="150CLZ-0810" urn="urn:adsk.eagle:package:23394/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors SMD (Chip)
 Long life base plate, very low impedance 150 CLZ
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="150CLZ-0810"/>
-</packageinstances>
 </package3d>
 <package3d name="150CLZ-1010" urn="urn:adsk.eagle:package:23403/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors SMD (Chip)
 Long life base plate, very low impedance 150 CLZ
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="150CLZ-1010"/>
-</packageinstances>
 </package3d>
 <package3d name="150CLZ-1014" urn="urn:adsk.eagle:package:23405/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors SMD (Chip)
 Long life base plate, very low impedance 150 CLZ
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="150CLZ-1014"/>
-</packageinstances>
 </package3d>
 <package3d name="153CLV-0405" urn="urn:adsk.eagle:package:23397/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 SMD (Chip) Long Life Vertical 153 CLV
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="153CLV-0405"/>
-</packageinstances>
 </package3d>
 <package3d name="153CLV-0505" urn="urn:adsk.eagle:package:23402/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 SMD (Chip) Long Life Vertical 153 CLV
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="153CLV-0505"/>
-</packageinstances>
 </package3d>
 <package3d name="153CLV-0605" urn="urn:adsk.eagle:package:23398/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 SMD (Chip) Long Life Vertical 153 CLV
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="153CLV-0605"/>
-</packageinstances>
 </package3d>
 <package3d name="153CLV-0807" urn="urn:adsk.eagle:package:23400/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 SMD (Chip) Long Life Vertical 153 CLV
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="153CLV-0807"/>
-</packageinstances>
 </package3d>
 <package3d name="153CLV-0810" urn="urn:adsk.eagle:package:23401/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 SMD (Chip) Long Life Vertical 153 CLV
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="153CLV-0810"/>
-</packageinstances>
 </package3d>
 <package3d name="153CLV-1010" urn="urn:adsk.eagle:package:23413/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 SMD (Chip) Long Life Vertical 153 CLV
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="153CLV-1010"/>
-</packageinstances>
 </package3d>
 <package3d name="153CLV-1012" urn="urn:adsk.eagle:package:23404/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 SMD (Chip) Long Life Vertical 153 CLV
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="153CLV-1012"/>
-</packageinstances>
 </package3d>
 <package3d name="153CLV-1014" urn="urn:adsk.eagle:package:23406/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 SMD (Chip) Long Life Vertical 153 CLV
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="153CLV-1014"/>
-</packageinstances>
 </package3d>
 <package3d name="175TMP-0808" urn="urn:adsk.eagle:package:23412/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 High Temperature solid electrolytic SMD 175 TMP
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="175TMP-0808"/>
-</packageinstances>
 </package3d>
 <package3d name="175TMP-0810" urn="urn:adsk.eagle:package:23407/1" type="box" library_version="2">
 <description>Aluminum electrolytic capacitors
 High Temperature solid electrolytic SMD 175 TMP
 http://www.bccomponents.com/</description>
-<packageinstances>
-<packageinstance name="175TMP-0810"/>
-</packageinstances>
 </package3d>
 <package3d name="A/3216-18R" urn="urn:adsk.eagle:package:23410/2" type="model" library_version="2">
 <description>Chip Capacitor Type KEMET A / EIA 3216-18 reflow solderKEMET S / EIA 3216-12</description>
-<packageinstances>
-<packageinstance name="A/3216-18R"/>
-</packageinstances>
 </package3d>
 <package3d name="A/3216-18W" urn="urn:adsk.eagle:package:23408/2" type="model" library_version="2">
 <description>Chip Capacitor Type KEMET A / EIA 3216-18 Wave solder
 KEMET S / EIA 3216-12</description>
-<packageinstances>
-<packageinstance name="A/3216-18W"/>
-</packageinstances>
 </package3d>
 <package3d name="T/3528-12R" urn="urn:adsk.eagle:package:25903/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET T / EIA 3528-12 Reflow solder
 EIA 3528-12 (Kemet T, AVX T): 3.5 mm × 2.8 mm × 1.2 mm</description>
-<packageinstances>
-<packageinstance name="T/3528-12R"/>
-</packageinstances>
 </package3d>
 <package3d name="B/3528-21W" urn="urn:adsk.eagle:package:23411/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET B / EIA 3528-21 Wave solder
 KEMET T / EIA 3528-12</description>
-<packageinstances>
-<packageinstance name="B/3528-21W"/>
-</packageinstances>
 </package3d>
 <package3d name="C/6032-28R" urn="urn:adsk.eagle:package:23415/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET C / EIA 6032-28 reflow solderKEMET U / EIA 6032-15</description>
-<packageinstances>
-<packageinstance name="C/6032-28R"/>
-</packageinstances>
 </package3d>
 <package3d name="C/6032-28W" urn="urn:adsk.eagle:package:23420/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET C / EIA 6032-28 Wafe solder
 KEMET U / EIA 6032-15</description>
-<packageinstances>
-<packageinstance name="C/6032-28W"/>
-</packageinstances>
 </package3d>
 <package3d name="D/7343-31R" urn="urn:adsk.eagle:package:23417/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET D / EIA 7343-21KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 reflow solder</description>
-<packageinstances>
-<packageinstance name="D/7343-31R"/>
-</packageinstances>
 </package3d>
 <package3d name="D/7343-31W" urn="urn:adsk.eagle:package:23414/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET D / EIA 7343-21
 KEMET V / EIA 7343-20, KEMET X / EIA 7343-43 Wafe solder</description>
-<packageinstances>
-<packageinstance name="D/7343-31W"/>
-</packageinstances>
 </package3d>
 <package3d name="E/7260-38R" urn="urn:adsk.eagle:package:23416/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET E / EIA 7260-38 reflow solder</description>
-<packageinstances>
-<packageinstance name="E/7260-38R"/>
-</packageinstances>
 </package3d>
 <package3d name="E/7260-38W" urn="urn:adsk.eagle:package:23423/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET E / EIA 7260-38 Wafe solder</description>
-<packageinstances>
-<packageinstance name="E/7260-38W"/>
-</packageinstances>
 </package3d>
 <package3d name="R/2012-12R" urn="urn:adsk.eagle:package:23426/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET R/EIA 2012-12 reflow solder</description>
-<packageinstances>
-<packageinstance name="R/2012-12R"/>
-</packageinstances>
 </package3d>
 <package3d name="R/2012-12W" urn="urn:adsk.eagle:package:23419/1" type="box" library_version="2">
 <description>Chip Capacitor Type KEMET R/EIA 2012-12 Wafe solder</description>
-<packageinstances>
-<packageinstance name="R/2012-12W"/>
-</packageinstances>
 </package3d>
 <package3d name="PANASONIC_A" urn="urn:adsk.eagle:package:23418/2" type="model" library_version="2">
 <description>Panasonic Aluminium Electrolytic Capacitor VS-Serie Package A</description>
-<packageinstances>
-<packageinstance name="PANASONIC_A"/>
-</packageinstances>
 </package3d>
 <package3d name="PANASONIC_B" urn="urn:adsk.eagle:package:23421/2" type="model" library_version="2">
 <description>Panasonic Aluminium Electrolytic Capacitor VS-Serie Package B</description>
-<packageinstances>
-<packageinstance name="PANASONIC_B"/>
-</packageinstances>
 </package3d>
 <package3d name="PANASONIC_C" urn="urn:adsk.eagle:package:23422/2" type="model" library_version="2">
 <description>Panasonic Aluminium Electrolytic Capacitor VS-Serie Package C</description>
-<packageinstances>
-<packageinstance name="PANASONIC_C"/>
-</packageinstances>
 </package3d>
 <package3d name="PANASONIC_D" urn="urn:adsk.eagle:package:23424/2" type="model" library_version="2">
 <description>Panasonic Aluminium Electrolytic Capacitor VS-Serie Package D</description>
-<packageinstances>
-<packageinstance name="PANASONIC_D"/>
-</packageinstances>
 </package3d>
 <package3d name="PANASONIC_E" urn="urn:adsk.eagle:package:23425/2" type="model" library_version="2">
 <description>Panasonic Aluminium Electrolytic Capacitor VS-Serie Package E</description>
-<packageinstances>
-<packageinstance name="PANASONIC_E"/>
-</packageinstances>
 </package3d>
 <package3d name="PANASONIC_F" urn="urn:adsk.eagle:package:23428/2" type="model" library_version="2">
 <description>Panasonic Aluminium Electrolytic Capacitor VS-Serie Package F</description>
-<packageinstances>
-<packageinstance name="PANASONIC_F"/>
-</packageinstances>
 </package3d>
 <package3d name="PANASONIC_G" urn="urn:adsk.eagle:package:23427/2" type="model" library_version="2">
 <description>Panasonic Aluminium Electrolytic Capacitor VS-Serie Package G</description>
-<packageinstances>
-<packageinstance name="PANASONIC_G"/>
-</packageinstances>
 </package3d>
 <package3d name="E1,8-4" urn="urn:adsk.eagle:package:23336/2" type="model" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 1.8 mm, diameter 4 mm</description>
-<packageinstances>
-<packageinstance name="E1,8-4"/>
-</packageinstances>
 </package3d>
 <package3d name="EB20D" urn="urn:adsk.eagle:package:23381/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 10.16 mm, diameter 20 mm</description>
-<packageinstances>
-<packageinstance name="EB20D"/>
-</packageinstances>
 </package3d>
 <package3d name="EB22,5D" urn="urn:adsk.eagle:package:23380/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 10.16 mm, diameter 22.5 mm</description>
-<packageinstances>
-<packageinstance name="EB22,5D"/>
-</packageinstances>
 </package3d>
 <package3d name="EB25D" urn="urn:adsk.eagle:package:23399/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 10.16 mm, diameter 25 mm</description>
-<packageinstances>
-<packageinstance name="EB25D"/>
-</packageinstances>
 </package3d>
 <package3d name="EB30D" urn="urn:adsk.eagle:package:23389/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 10.16 mm, diameter 30 mm</description>
-<packageinstances>
-<packageinstance name="EB30D"/>
-</packageinstances>
 </package3d>
 <package3d name="EB35D" urn="urn:adsk.eagle:package:23395/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 10.16 mm, diameter 35 mm</description>
-<packageinstances>
-<packageinstance name="EB35D"/>
-</packageinstances>
 </package3d>
 <package3d name="E15-5" urn="urn:adsk.eagle:package:23341/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 15.24 mm, diameter 5 mm</description>
-<packageinstances>
-<packageinstance name="E15-5"/>
-</packageinstances>
 </package3d>
 <package3d name="E15-6" urn="urn:adsk.eagle:package:23339/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 15.24 mm, diameter 6 mm</description>
-<packageinstances>
-<packageinstance name="E15-6"/>
-</packageinstances>
 </package3d>
 <package3d name="E15-9" urn="urn:adsk.eagle:package:23340/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 15.24 mm, diameter 9 mm</description>
-<packageinstances>
-<packageinstance name="E15-9"/>
-</packageinstances>
 </package3d>
 <package3d name="E2,5-6E" urn="urn:adsk.eagle:package:23430/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 2.54 mm, diameter 6 mm</description>
-<packageinstances>
-<packageinstance name="E2,5-6E"/>
-</packageinstances>
 </package3d>
 <package3d name="E2-4" urn="urn:adsk.eagle:package:23347/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 2 mm, diameter 4 mm</description>
-<packageinstances>
-<packageinstance name="E2-4"/>
-</packageinstances>
 </package3d>
 <package3d name="E2-5" urn="urn:adsk.eagle:package:23346/2" type="model" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 2.032 mm, diameter 5 mm</description>
-<packageinstances>
-<packageinstance name="E2-5"/>
-</packageinstances>
 </package3d>
 <package3d name="E2,5RE" urn="urn:adsk.eagle:package:23343/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 2.54 mm, diameter 4 mm,</description>
-<packageinstances>
-<packageinstance name="E2,5RE"/>
-</packageinstances>
 </package3d>
 <package3d name="E2,5-5" urn="urn:adsk.eagle:package:23344/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 2.54 mm, diameter 5 mm</description>
-<packageinstances>
-<packageinstance name="E2,5-5"/>
-</packageinstances>
 </package3d>
 <package3d name="E2,5-4R" urn="urn:adsk.eagle:package:23342/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 2.54 mm, diameter 4 mm</description>
-<packageinstances>
-<packageinstance name="E2,5-4R"/>
-</packageinstances>
 </package3d>
 <package3d name="E2,5-6" urn="urn:adsk.eagle:package:23349/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 2.54 mm, diameter 6 mm</description>
-<packageinstances>
-<packageinstance name="E2,5-6"/>
-</packageinstances>
 </package3d>
 <package3d name="E2,5-7" urn="urn:adsk.eagle:package:23345/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 2.54 mm, diameter 7 mm</description>
-<packageinstances>
-<packageinstance name="E2,5-7"/>
-</packageinstances>
 </package3d>
 <package3d name="E22-10" urn="urn:adsk.eagle:package:23348/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 22.86 mm, diameter 10 mm</description>
-<packageinstances>
-<packageinstance name="E22-10"/>
-</packageinstances>
 </package3d>
 <package3d name="E22-6" urn="urn:adsk.eagle:package:23359/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 22.86 mm, diameter 6 mm</description>
-<packageinstances>
-<packageinstance name="E22-6"/>
-</packageinstances>
 </package3d>
 <package3d name="E22-9" urn="urn:adsk.eagle:package:23350/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 22.86 mm, diameter 9 mm</description>
-<packageinstances>
-<packageinstance name="E22-9"/>
-</packageinstances>
 </package3d>
 <package3d name="E25-10" urn="urn:adsk.eagle:package:23352/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 25.4 mm, diameter 10 mm</description>
-<packageinstances>
-<packageinstance name="E25-10"/>
-</packageinstances>
 </package3d>
 <package3d name="E25-9" urn="urn:adsk.eagle:package:23358/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 25.4 mm, diameter 9 mm</description>
-<packageinstances>
-<packageinstance name="E25-9"/>
-</packageinstances>
 </package3d>
 <package3d name="E3,5-10" urn="urn:adsk.eagle:package:23351/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 3.5 mm, diameter 10 mm</description>
-<packageinstances>
-<packageinstance name="E3,5-10"/>
-</packageinstances>
 </package3d>
 <package3d name="E3,5-8" urn="urn:adsk.eagle:package:23360/2" type="model" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 3.5 mm, diameter 8 mm</description>
-<packageinstances>
-<packageinstance name="E3,5-8"/>
-</packageinstances>
 </package3d>
 <package3d name="E30-10" urn="urn:adsk.eagle:package:23355/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 30.48 mm, diameter 10 mm</description>
-<packageinstances>
-<packageinstance name="E30-10"/>
-</packageinstances>
 </package3d>
 <package3d name="E30-12" urn="urn:adsk.eagle:package:23354/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 30.48 mm, diameter 12 mm</description>
-<packageinstances>
-<packageinstance name="E30-12"/>
-</packageinstances>
 </package3d>
 <package3d name="E30-16" urn="urn:adsk.eagle:package:23353/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 30.48 mm, diameter 16 mm</description>
-<packageinstances>
-<packageinstance name="E30-16"/>
-</packageinstances>
 </package3d>
 <package3d name="E35-12" urn="urn:adsk.eagle:package:23357/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 35.56 mm, diameter 12 mm</description>
-<packageinstances>
-<packageinstance name="E35-12"/>
-</packageinstances>
 </package3d>
 <package3d name="E35-14" urn="urn:adsk.eagle:package:23377/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 30.48 mm, diameter 14 mm</description>
-<packageinstances>
-<packageinstance name="E35-14"/>
-</packageinstances>
 </package3d>
 <package3d name="E35-16" urn="urn:adsk.eagle:package:23362/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 30.48 mm, diameter 16 mm</description>
-<packageinstances>
-<packageinstance name="E35-16"/>
-</packageinstances>
 </package3d>
 <package3d name="E35-18" urn="urn:adsk.eagle:package:23356/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 30.48 mm, diameter 18 mm</description>
-<packageinstances>
-<packageinstance name="E35-18"/>
-</packageinstances>
 </package3d>
 <package3d name="E45-16" urn="urn:adsk.eagle:package:23365/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 45.72 mm, diameter 16 mm</description>
-<packageinstances>
-<packageinstance name="E45-16"/>
-</packageinstances>
 </package3d>
 <package3d name="E45-18" urn="urn:adsk.eagle:package:23361/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 45.72 mm, diameter 18 mm</description>
-<packageinstances>
-<packageinstance name="E45-18"/>
-</packageinstances>
 </package3d>
 <package3d name="E45-21" urn="urn:adsk.eagle:package:23363/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 45.72 mm, diameter 21 mm</description>
-<packageinstances>
-<packageinstance name="E45-21"/>
-</packageinstances>
 </package3d>
 <package3d name="E45-22" urn="urn:adsk.eagle:package:23366/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 45.72 mm, diameter 22 mm</description>
-<packageinstances>
-<packageinstance name="E45-22"/>
-</packageinstances>
 </package3d>
 <package3d name="E45-25" urn="urn:adsk.eagle:package:23364/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 45.72 mm, diameter 25 mm</description>
-<packageinstances>
-<packageinstance name="E45-25"/>
-</packageinstances>
 </package3d>
 <package3d name="E5-10,5" urn="urn:adsk.eagle:package:23372/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 5.08 mm, diameter 10.5 mm</description>
-<packageinstances>
-<packageinstance name="E5-10,5"/>
-</packageinstances>
 </package3d>
 <package3d name="E5-13" urn="urn:adsk.eagle:package:23375/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 5.08 mm, diameter 13 mm</description>
-<packageinstances>
-<packageinstance name="E5-13"/>
-</packageinstances>
 </package3d>
 <package3d name="E5-4" urn="urn:adsk.eagle:package:23370/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 5.05 mm, diameter 4 mm</description>
-<packageinstances>
-<packageinstance name="E5-4"/>
-</packageinstances>
 </package3d>
 <package3d name="E5-5" urn="urn:adsk.eagle:package:23367/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 5.08 mm, diameter 5 mm</description>
-<packageinstances>
-<packageinstance name="E5-5"/>
-</packageinstances>
 </package3d>
 <package3d name="E5-6" urn="urn:adsk.eagle:package:23368/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 5.08 mm, diameter 6 mm</description>
-<packageinstances>
-<packageinstance name="E5-6"/>
-</packageinstances>
 </package3d>
 <package3d name="E5-8,5" urn="urn:adsk.eagle:package:23374/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 5.08 mm, diameter 8.5 mm</description>
-<packageinstances>
-<packageinstance name="E5-8,5"/>
-</packageinstances>
 </package3d>
 <package3d name="E5R" urn="urn:adsk.eagle:package:23373/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 5.08 mm, diameter 9 mm</description>
-<packageinstances>
-<packageinstance name="E5R"/>
-</packageinstances>
 </package3d>
 <package3d name="E50-25" urn="urn:adsk.eagle:package:23369/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 50 mm, diameter 25 mm</description>
-<packageinstances>
-<packageinstance name="E50-25"/>
-</packageinstances>
 </package3d>
 <package3d name="E50-30" urn="urn:adsk.eagle:package:23371/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 50 mm, diameter 30 mm</description>
-<packageinstances>
-<packageinstance name="E50-30"/>
-</packageinstances>
 </package3d>
 <package3d name="E55-25" urn="urn:adsk.eagle:package:23376/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 55 mm, diameter 25 mm</description>
-<packageinstances>
-<packageinstance name="E55-25"/>
-</packageinstances>
 </package3d>
 <package3d name="E55-30" urn="urn:adsk.eagle:package:23378/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 55 mm, diameter 30 mm</description>
-<packageinstances>
-<packageinstance name="E55-30"/>
-</packageinstances>
 </package3d>
 <package3d name="E7,5-16" urn="urn:adsk.eagle:package:23382/2" type="model" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 7.62 mm, diameter 16 mm</description>
-<packageinstances>
-<packageinstance name="E7,5-16"/>
-</packageinstances>
 </package3d>
 <package3d name="E7,5-18" urn="urn:adsk.eagle:package:23379/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 grid 7.62 mm, diameter 18 mm</description>
-<packageinstances>
-<packageinstance name="E7,5-18"/>
-</packageinstances>
 </package3d>
 <package3d name="TT2D5L" urn="urn:adsk.eagle:package:23429/1" type="box" library_version="2">
 <description>ELECTROLYTIC CAPACITOR
 diameter 5 mm, grid 2.54 mm</description>
-<packageinstances>
-<packageinstance name="TT2D5L"/>
-</packageinstances>
 </package3d>
 </packages3d>
 <symbols>
@@ -9730,9 +9387,6 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <package3d name="3RP/1610N" urn="urn:adsk.eagle:package:22726/1" type="box" library_version="1">
 <description>16mm Potentiometer one level
 Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
-<packageinstances>
-<packageinstance name="3RP/1610N"/>
-</packageinstances>
 </package3d>
 </packages3d>
 <symbols>
@@ -9870,6 +9524,7 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <part name="GND23" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY11" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="OLED1" library="TRANS_IRF3205SPBF" deviceset="I2C_OLED_4PIN_HEADER" device=""/>
+<part name="U$1" library="TRANS_IRF3205SPBF" deviceset="TERMINAL3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9962,6 +9617,7 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 </instance>
 <instance part="SUPPLY11" gate="G$1" x="-35.56" y="10.16"/>
 <instance part="OLED1" gate="G$1" x="-73.66" y="-25.4"/>
+<instance part="U$1" gate="G$1" x="200.66" y="7.62"/>
 </instances>
 <busses>
 </busses>
@@ -10194,11 +9850,14 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <wire x1="114.3" y1="-38.1" x2="111.76" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="-48.26" x2="149.86" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="-48.26" x2="149.86" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="-45.72" x2="157.48" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="-48.26" x2="149.86" y2="-50.8" width="0.1524" layer="91"/>
 <junction x="149.86" y="-48.26"/>
 <pinref part="R0805_N2" gate="G$1" pin="1"/>
 <wire x1="152.4" y1="-50.8" x2="149.86" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="-45.72" x2="182.88" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="-45.72" x2="182.88" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="A"/>
+<wire x1="182.88" y1="12.7" x2="195.58" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -10266,13 +9925,14 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <wire x1="114.3" y1="5.08" x2="114.3" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="TC2" gate="G$1" pin="VS"/>
 <wire x1="114.3" y1="15.24" x2="111.76" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="7.62" x2="157.48" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="7.62" x2="149.86" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="R0805_N6" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="5.08" x2="149.86" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="2.54" x2="149.86" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="5.08" x2="149.86" y2="5.08" width="0.1524" layer="91"/>
 <junction x="149.86" y="5.08"/>
+<wire x1="149.86" y1="7.62" x2="195.58" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="B"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -10329,13 +9989,16 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <wire x1="114.3" y1="58.42" x2="114.3" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="TC3" gate="G$1" pin="VS"/>
 <wire x1="114.3" y1="68.58" x2="111.76" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="60.96" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="60.96" x2="149.86" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="R0805_N10" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="58.42" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="55.88" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="58.42" x2="149.86" y2="58.42" width="0.1524" layer="91"/>
 <junction x="149.86" y="58.42"/>
+<wire x1="149.86" y1="60.96" x2="185.42" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="60.96" x2="185.42" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="C"/>
+<wire x1="185.42" y1="2.54" x2="195.58" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$24" class="0">

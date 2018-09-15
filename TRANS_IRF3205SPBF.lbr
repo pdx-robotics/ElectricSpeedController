@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.2">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1260,6 +1260,8 @@ grid 2.54 mm</description>
 <wire x1="-5.08" y1="-0.635" x2="-1.27" y2="-0.635" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-4.445" x2="-1.27" y2="-4.445" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-5.715" x2="-1.27" y2="-5.715" width="0.127" layer="21"/>
+<text x="-1.27" y="7.62" size="1.27" layer="25">&gt;Name</text>
+<text x="-1.27" y="6.35" size="1.27" layer="27">&gt;Value</text>
 </package>
 <package name="LED_PADS">
 <pad name="P$1" x="-1.27" y="0" drill="1" shape="square"/>
@@ -1612,6 +1614,23 @@ grid 2.54 mm</description>
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TERMINAL3">
+<gates>
+<gate name="G$1" symbol="3PIN_TERMIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="3PIN_TERMINAL">
+<connects>
+<connect gate="G$1" pin="A" pad="P$1"/>
+<connect gate="G$1" pin="B" pad="P$2"/>
+<connect gate="G$1" pin="C" pad="P$3"/>
 </connects>
 <technologies>
 <technology name=""/>
