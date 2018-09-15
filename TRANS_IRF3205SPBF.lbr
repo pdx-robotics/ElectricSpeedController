@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1278,9 +1278,23 @@ grid 2.54 mm</description>
 <pad name="P$1" x="-5.08" y="0" drill="0.6" diameter="1.9304"/>
 <pad name="P$2" x="5.08" y="0" drill="0.6" diameter="1.9304"/>
 </package>
-<package name="CAP">
+<package name="CAP_SMALL">
 <pad name="P$1" x="0" y="1.27" drill="0.6" diameter="1.27" shape="square"/>
 <pad name="P$2" x="0" y="-1.27" drill="0.6" diameter="1.27"/>
+<wire x1="0.889" y1="1.27" x2="1.143" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.016" y1="1.143" x2="1.016" y2="1.397" width="0.127" layer="21"/>
+<wire x1="0.889" y1="-1.27" x2="1.143" y2="-1.27" width="0.127" layer="21"/>
+</package>
+<package name="CAP_LARGE">
+<pad name="P$1" x="0" y="3.81" drill="0.6" diameter="1.27" shape="square"/>
+<pad name="P$2" x="0" y="-3.81" drill="0.6" diameter="1.27"/>
+<wire x1="0.889" y1="2.54" x2="1.143" y2="2.54" width="0.127" layer="21"/>
+<wire x1="1.016" y1="2.413" x2="1.016" y2="2.667" width="0.127" layer="21"/>
+<wire x1="0.889" y1="-2.54" x2="1.143" y2="-2.54" width="0.127" layer="21"/>
+</package>
+<package name="CAP_SMALLWIDE">
+<pad name="P$1" x="0" y="2.54" drill="0.6" diameter="1.27" shape="square"/>
+<pad name="P$2" x="0" y="-2.54" drill="0.6" diameter="1.27"/>
 <wire x1="0.889" y1="1.27" x2="1.143" y2="1.27" width="0.127" layer="21"/>
 <wire x1="1.016" y1="1.143" x2="1.016" y2="1.397" width="0.127" layer="21"/>
 <wire x1="0.889" y1="-1.27" x2="1.143" y2="-1.27" width="0.127" layer="21"/>
@@ -1505,58 +1519,6 @@ grid 2.54 mm</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="R100OHM_0805" prefix="R0805_N" uservalue="yes">
-<gates>
-<gate name="G$1" symbol="R-US" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="0805">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="R1KOHM_0805" prefix="R0805_N" uservalue="yes">
-<gates>
-<gate name="G$1" symbol="R-US" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="0805">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="RESISTANCE" value="1K"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="R2KOHM_0805" prefix="R0805_N" uservalue="yes">
-<gates>
-<gate name="G$1" symbol="R-US" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="0805">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="RESISTANCE" value="2K"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="TSC428CPA" prefix="TC428" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="TC428" x="0" y="0"/>
@@ -1634,6 +1596,22 @@ grid 2.54 mm</description>
 <connect gate="G$1" pin="SCL" pad="2"/>
 <connect gate="G$1" pin="SDA" pad="1"/>
 <connect gate="G$1" pin="VCC" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="4700UF_CAP" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="C-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CAP_LARGE">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
