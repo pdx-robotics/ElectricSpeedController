@@ -1169,7 +1169,7 @@ grid 2.54 mm</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ARDUINO_NANO_CONNECTOR" prefix="ARDUINO_NANO_SPOT">
+<deviceset name="ARDUINO_NANO_CONNECTOR" prefix="NANO_SPOT" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="FE15-2" x="0" y="0"/>
 </gates>
