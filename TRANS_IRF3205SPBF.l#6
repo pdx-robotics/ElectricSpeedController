@@ -884,6 +884,10 @@ grid 2.54 mm</description>
 <pad name="P$2" x="1.27" y="0" drill="0.6" diameter="1.27"/>
 <circle x="0" y="0" radius="6.35" width="0.127" layer="21"/>
 </package>
+<package name="CAP_CERAMIC">
+<pad name="P$1" x="-2.54" y="0" drill="0.6" shape="square"/>
+<pad name="P$2" x="2.54" y="0" drill="0.6" shape="square"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MOSFET_N">
@@ -1233,21 +1237,6 @@ grid 2.54 mm</description>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SMALL" package="CAPACITOR">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="CERAMIC" package="CAPACITOR">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="LARGE" package="CAPACITOR">
 <technologies>
 <technology name=""/>
 </technologies>

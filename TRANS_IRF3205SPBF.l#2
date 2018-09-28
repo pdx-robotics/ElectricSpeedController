@@ -899,6 +899,16 @@ grid 2.54 mm</description>
 <pad name="P$2" x="3.81" y="0" drill="0.6" diameter="1.27"/>
 <circle x="0" y="0" radius="7.62" width="0.127" layer="21"/>
 </package>
+<package name="IRF3205">
+<pad name="DRAIN" x="0" y="0" drill="0.6" shape="square"/>
+<pad name="GATE" x="2.54" y="0" drill="0.6" shape="square"/>
+<pad name="SOURCE" x="-2.54" y="0" drill="0.6" shape="square"/>
+<wire x1="7.62" y1="1.27" x2="-7.62" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-7.62" y1="1.27" x2="-7.62" y2="-10.16" width="0.127" layer="21"/>
+<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.127" layer="21"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="1.27" width="0.127" layer="21"/>
+<hole x="0" y="-6.35" drill="0.35"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MOSFET_N">
@@ -1240,13 +1250,13 @@ grid 2.54 mm</description>
 </deviceset>
 <deviceset name="CAPACITOR" uservalue="yes">
 <gates>
-<gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
+<gate name="&gt;NAME" symbol="CAPACITOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="CAP_SMALL">
+<device name="SMALL" package="CAP_SMALL">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-<connect gate="G$1" pin="2" pad="P$2"/>
+<connect gate="&gt;NAME" pin="1" pad="P$1"/>
+<connect gate="&gt;NAME" pin="2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1254,8 +1264,17 @@ grid 2.54 mm</description>
 </device>
 <device name="CERAMIC" package="CAP_CERAMIC">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-<connect gate="G$1" pin="2" pad="P$2"/>
+<connect gate="&gt;NAME" pin="1" pad="P$1"/>
+<connect gate="&gt;NAME" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="LARGE" package="CAP_LARGE">
+<connects>
+<connect gate="&gt;NAME" pin="1" pad="P$1"/>
+<connect gate="&gt;NAME" pin="2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
