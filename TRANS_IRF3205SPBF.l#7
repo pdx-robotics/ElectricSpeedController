@@ -879,10 +879,25 @@ grid 2.54 mm</description>
 <text x="-2.54" y="-2.54" size="1.27" layer="27">&gt;Value</text>
 <text x="-2.54" y="1.27" size="1.27" layer="25">&gt;Name</text>
 </package>
-<package name="CAPACITOR">
+<package name="CAP_SMALL">
 <pad name="P$1" x="-1.27" y="0" drill="0.6" diameter="1.27" shape="square"/>
 <pad name="P$2" x="1.27" y="0" drill="0.6" diameter="1.27"/>
-<circle x="0" y="0" radius="6.35" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="3.81" width="0.127" layer="21"/>
+</package>
+<package name="CAP_CERAMIC">
+<pad name="P$1" x="-2.54" y="0" drill="0.6" shape="square"/>
+<pad name="P$2" x="2.54" y="0" drill="0.6" shape="square"/>
+<wire x1="2.54" y1="0" x2="1.27" y2="-1.27" width="0.127" layer="21" curve="-45"/>
+<wire x1="-2.54" y1="0" x2="-1.27" y2="1.27" width="0.127" layer="21" curve="-45"/>
+<wire x1="1.27" y1="1.27" x2="2.54" y2="0" width="0.127" layer="21" curve="-33.690068"/>
+<wire x1="-1.27" y1="-1.27" x2="-2.54" y2="0" width="0.127" layer="21" curve="-33.690068"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.127" layer="21"/>
+</package>
+<package name="CAP_LARGE">
+<pad name="P$1" x="-3.81" y="0" drill="0.6" diameter="1.27" shape="square"/>
+<pad name="P$2" x="3.81" y="0" drill="0.6" diameter="1.27"/>
+<circle x="0" y="0" radius="7.62" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1228,7 +1243,7 @@ grid 2.54 mm</description>
 <gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="CAPACITOR">
+<device name="" package="CAP_SMALL">
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
@@ -1237,17 +1252,11 @@ grid 2.54 mm</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="SMALL" package="CAPACITOR">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="CERAMIC" package="CAPACITOR">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="LARGE" package="CAPACITOR">
+<device name="CERAMIC" package="CAP_CERAMIC">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
