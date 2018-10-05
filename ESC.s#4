@@ -539,6 +539,31 @@ grid 2.54 mm</description>
 <circle x="0" y="17.145" radius="0.635" width="0.127" layer="21"/>
 <circle x="1.905" y="17.145" radius="0.635" width="0.127" layer="21"/>
 </package>
+<package name="2P_POWER">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-4.445" y1="1.27" x2="-3.175" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="0.635" x2="-5.08" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-4.445" y1="1.27" x2="-5.08" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-0.635" x2="-4.445" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="-1.27" x2="-4.445" y2="-1.27" width="0.1524" layer="21"/>
+<pad name="+" x="-3.81" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="-" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-5.08" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-6.223" y="-0.635" size="1.27" layer="21" ratio="10">+</text>
+<text x="-5.715" y="-2.159" size="1.27" layer="27" ratio="10" align="top-left">&gt;VALUE</text>
+<text x="0.254" y="-0.635" size="1.27" layer="21" ratio="10">-</text>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
+<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MOSFET_N">
@@ -722,6 +747,16 @@ grid 2.54 mm</description>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 <text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
 </symbol>
+<symbol name="2P_POWER">
+<pin name="VIN" x="-7.62" y="2.54" length="middle" direction="pwr"/>
+<pin name="GND" x="-7.62" y="-2.54" length="middle" direction="sup"/>
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<text x="-5.08" y="7.62" size="1.27" layer="95">&gt;Name</text>
+<text x="-5.08" y="5.08" size="1.27" layer="96">&gt;Value</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="IRF3205" prefix="IRF3205" uservalue="yes">
@@ -902,6 +937,22 @@ grid 2.54 mm</description>
 </gates>
 <devices>
 <device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="2P_POWER" prefix="FAN">
+<gates>
+<gate name="G$1" symbol="2P_POWER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2P_POWER">
+<connects>
+<connect gate="G$1" pin="GND" pad="-"/>
+<connect gate="G$1" pin="VIN" pad="+"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -9100,6 +9151,8 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <part name="GND18" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="NANO_SPOT1" library="TRANS_IRF3205SPBF" deviceset="ARDUINO_NANO_CONNECTOR" device=""/>
 <part name="GND22" library="TRANS_IRF3205SPBF" deviceset="GND" device=""/>
+<part name="FAN1" library="TRANS_IRF3205SPBF" deviceset="2P_POWER" device=""/>
+<part name="GND24" library="TRANS_IRF3205SPBF" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9185,6 +9238,8 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <instance part="GND18" gate="1" x="-88.9" y="20.32"/>
 <instance part="NANO_SPOT1" gate="G$1" x="-43.18" y="-20.32"/>
 <instance part="GND22" gate="1" x="-53.34" y="2.54"/>
+<instance part="FAN1" gate="G$1" x="7.62" y="33.02"/>
+<instance part="GND24" gate="1" x="-2.54" y="25.4"/>
 </instances>
 <busses>
 </busses>
@@ -9317,6 +9372,12 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <wire x1="-15.24" y1="7.62" x2="-53.34" y2="7.62" width="0.1524" layer="91"/>
 <junction x="-53.34" y="7.62"/>
 <pinref part="GND22" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="FAN1" gate="G$1" pin="GND"/>
+<wire x1="0" y1="30.48" x2="-2.54" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="30.48" x2="-2.54" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="GND24" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="12V" class="0">
@@ -9731,6 +9792,11 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <pinref part="OLED1" gate="G$1" pin="VCC"/>
 <wire x1="-86.36" y1="30.48" x2="-88.9" y2="30.48" width="0.1524" layer="91"/>
 <label x="-88.9" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="FAN1" gate="G$1" pin="VIN"/>
+<wire x1="0" y1="35.56" x2="-2.54" y2="35.56" width="0.1524" layer="91"/>
+<label x="-2.54" y="35.56" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="AREF" class="0">
