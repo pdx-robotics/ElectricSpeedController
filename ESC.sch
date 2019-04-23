@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.2">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1407,7 +1407,6 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND5" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="D1" library="1N4001" deviceset="1N4001" device=""/>
 <part name="IR2301PBF-ND_1" library="TRANS_IRF3205SPBF" deviceset="TSC428CPA" device=""/>
@@ -1427,8 +1426,6 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <part name="GND16" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="D3" library="1N4001" deviceset="1N4001" device=""/>
 <part name="IR2301PBF-ND_3" library="TRANS_IRF3205SPBF" deviceset="TSC428CPA" device=""/>
-<part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="GND17" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="POT" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="3RP/1610N" device="" package3d_urn="urn:adsk.eagle:package:22726/1" value="10K ohm"/>
 <part name="GND23" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="OLED1" library="TRANS_IRF3205SPBF" deviceset="I2C_OLED_4PIN_HEADER" device=""/>
@@ -1439,11 +1436,9 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <part name="GND24" library="TRANS_IRF3205SPBF" deviceset="GND" device=""/>
 <part name="FAN1" library="TRANS_IRF3205SPBF" deviceset="2P_POWER" device=""/>
 <part name="U$3" library="TRANS_IRF3205SPBF" deviceset="BOAT_SWITCH" device=""/>
-<part name="C1" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="LARGE" value="4700uF"/>
-<part name="C2" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="SMALL" value="100uF"/>
+<part name="C2" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="SMALL" value="22uF"/>
 <part name="U$4" library="TRANS_IRF3205SPBF" deviceset="BARREL_JACK" device=""/>
-<part name="C3" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="SMALL" value="22uF"/>
-<part name="C4" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="CERAMIC" value=".1uF"/>
+<part name="C3" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="SMALL" value="10uF"/>
 <part name="C5" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="SMALL" value="22uF"/>
 <part name="C6" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="CERAMIC" value=".1uF"/>
 <part name="C7" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="CERAMIC" value=".1uF"/>
@@ -1454,25 +1449,21 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <part name="C12" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="CERAMIC" value=".1uF"/>
 <part name="C13" library="TRANS_IRF3205SPBF" deviceset="CAPACITOR" device="CERAMIC" value=".1uF"/>
 <part name="GND1" library="TRANS_IRF3205SPBF" deviceset="GND" device=""/>
-<part name="U$2" library="TRANS_IRF3205SPBF" deviceset="LED" device=""/>
-<part name="U$5" library="TRANS_IRF3205SPBF" deviceset="LED" device=""/>
-<part name="U$6" library="TRANS_IRF3205SPBF" deviceset="LED" device=""/>
 <part name="U$7" library="TRANS_IRF3205SPBF" deviceset="LED" device=""/>
 <part name="SUPPLY1" library="TRANS_IRF3205SPBF" deviceset="12V" device=""/>
 <part name="R1" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device=""/>
 <part name="R2" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="100Ohm"/>
 <part name="R3" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="100Ohm"/>
 <part name="R4" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="2kOhm"/>
-<part name="R5" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="1kOhm"/>
 <part name="R6" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="100Ohm"/>
 <part name="R7" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="100Ohm"/>
 <part name="R8" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="2kOhm"/>
-<part name="R9" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="1kOhm"/>
 <part name="R10" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="100Ohm"/>
 <part name="R11" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="100Ohm"/>
 <part name="R12" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="2kOhm"/>
-<part name="R13" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="1kOhm"/>
 <part name="AZ1117CH5.0" library="TRANS_IRF3205SPBF" deviceset="AZ1117CH" device=""/>
+<part name="R5" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="560Ohm"/>
+<part name="R9" library="TRANS_IRF3205SPBF" deviceset="RESISTOR" device="" value="330Ohm"/>
 </parts>
 <sheets>
 <sheet>
@@ -1488,8 +1479,7 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <instance part="GND3" gate="1" x="22.86" y="53.34"/>
 <instance part="GND4" gate="1" x="96.52" y="33.02"/>
 <instance part="GND5" gate="1" x="5.08" y="53.34"/>
-<instance part="GND6" gate="1" x="124.46" y="22.86"/>
-<instance part="GND14" gate="1" x="-99.06" y="53.34"/>
+<instance part="GND14" gate="1" x="-88.9" y="53.34"/>
 <instance part="D1" gate="1" x="55.88" y="76.2"/>
 <instance part="IR2301PBF-ND_1" gate="G$1" x="55.88" y="66.04"/>
 <instance part="IRF3205PBF-ND_3" gate="&gt;NAME" x="93.98" y="10.16"/>
@@ -1508,8 +1498,6 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <instance part="GND16" gate="1" x="5.08" y="-63.5"/>
 <instance part="D3" gate="1" x="55.88" y="-40.64"/>
 <instance part="IR2301PBF-ND_3" gate="G$1" x="55.88" y="-50.8"/>
-<instance part="GND11" gate="1" x="124.46" y="-35.56"/>
-<instance part="GND17" gate="1" x="124.46" y="-93.98"/>
 <instance part="POT" gate="G$1" x="-78.74" y="-66.04"/>
 <instance part="GND23" gate="1" x="-78.74" y="-76.2" smashed="yes">
 <attribute name="VALUE" x="-78.74" y="-76.454" size="1.778" layer="96" align="top-center"/>
@@ -1522,11 +1510,9 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <instance part="GND24" gate="1" x="-2.54" y="25.4"/>
 <instance part="FAN1" gate="G$1" x="7.62" y="33.02"/>
 <instance part="U$3" gate="G$1" x="-25.4" y="-60.96" rot="R180"/>
-<instance part="C1" gate="&gt;NAME" x="-99.06" y="66.04"/>
 <instance part="C2" gate="&gt;NAME" x="-38.1" y="66.04"/>
 <instance part="U$4" gate="G$1" x="-43.18" y="-63.5"/>
-<instance part="C3" gate="&gt;NAME" x="-81.28" y="66.04"/>
-<instance part="C4" gate="&gt;NAME" x="-88.9" y="66.04"/>
+<instance part="C3" gate="&gt;NAME" x="-81.28" y="68.58"/>
 <instance part="C5" gate="&gt;NAME" x="5.08" y="63.5"/>
 <instance part="C6" gate="&gt;NAME" x="22.86" y="63.5"/>
 <instance part="C7" gate="&gt;NAME" x="76.2" y="58.42"/>
@@ -1537,25 +1523,21 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <instance part="C12" gate="&gt;NAME" x="22.86" y="-53.34"/>
 <instance part="C13" gate="&gt;NAME" x="76.2" y="-58.42"/>
 <instance part="GND1" gate="1" x="-27.94" y="-88.9"/>
-<instance part="U$2" gate="G$1" x="124.46" y="33.02" rot="R270"/>
-<instance part="U$5" gate="G$1" x="124.46" y="-25.4" rot="R270"/>
-<instance part="U$6" gate="G$1" x="124.46" y="-83.82" rot="R270"/>
 <instance part="U$7" gate="G$1" x="-17.78" y="-78.74" rot="R270"/>
 <instance part="SUPPLY1" gate="G$1" x="-33.02" y="-48.26"/>
 <instance part="R1" gate="&gt;NAME" x="-17.78" y="-68.58" rot="R90"/>
 <instance part="R2" gate="&gt;NAME" x="83.82" y="66.04"/>
 <instance part="R3" gate="&gt;NAME" x="83.82" y="45.72"/>
 <instance part="R4" gate="&gt;NAME" x="116.84" y="50.8"/>
-<instance part="R5" gate="&gt;NAME" x="124.46" y="43.18" rot="R270"/>
 <instance part="R6" gate="&gt;NAME" x="83.82" y="7.62"/>
 <instance part="R7" gate="&gt;NAME" x="83.82" y="-12.7"/>
 <instance part="R8" gate="&gt;NAME" x="116.84" y="-7.62"/>
-<instance part="R9" gate="&gt;NAME" x="124.46" y="-15.24" rot="R270"/>
 <instance part="R10" gate="&gt;NAME" x="83.82" y="-50.8"/>
 <instance part="R11" gate="&gt;NAME" x="83.82" y="-71.12"/>
 <instance part="R12" gate="&gt;NAME" x="116.84" y="-66.04"/>
-<instance part="R13" gate="&gt;NAME" x="124.46" y="-73.66" rot="R270"/>
 <instance part="AZ1117CH5.0" gate="G$1" x="-58.42" y="73.66"/>
+<instance part="R5" gate="&gt;NAME" x="-88.9" y="66.04" rot="R90"/>
+<instance part="R9" gate="&gt;NAME" x="-99.06" y="76.2"/>
 </instances>
 <busses>
 </busses>
@@ -1605,28 +1587,6 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <pinref part="IR2301PBF-ND_3" gate="G$1" pin="COM"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="43.18" y1="-55.88" x2="43.18" y2="-60.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="C1" gate="&gt;NAME" pin="2"/>
-<wire x1="-99.06" y1="60.96" x2="-99.06" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="C2" gate="&gt;NAME" pin="2"/>
-<wire x1="-99.06" y1="58.42" x2="-99.06" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-99.06" y1="58.42" x2="-88.9" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-88.9" y1="58.42" x2="-81.28" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="58.42" x2="-71.12" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="58.42" x2="-38.1" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="58.42" x2="-38.1" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-99.06" y="58.42"/>
-<wire x1="-81.28" y1="60.96" x2="-81.28" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-81.28" y="58.42"/>
-<wire x1="-88.9" y1="60.96" x2="-88.9" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-88.9" y="58.42"/>
-<pinref part="C3" gate="&gt;NAME" pin="2"/>
-<pinref part="C4" gate="&gt;NAME" pin="2"/>
-<pinref part="AZ1117CH5.0" gate="G$1" pin="ADJ/GND"/>
-<wire x1="-71.12" y1="71.12" x2="-71.12" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-71.12" y="58.42"/>
 </segment>
 <segment>
 <pinref part="GND16" gate="1" pin="GND"/>
@@ -1684,19 +1644,22 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <junction x="-27.94" y="-83.82"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="C"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="124.46" y1="27.94" x2="124.46" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$5" gate="G$1" pin="C"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="124.46" y1="-30.48" x2="124.46" y2="-33.02" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$6" gate="G$1" pin="C"/>
-<pinref part="GND17" gate="1" pin="GND"/>
-<wire x1="124.46" y1="-88.9" x2="124.46" y2="-91.44" width="0.1524" layer="91"/>
+<pinref part="C2" gate="&gt;NAME" pin="2"/>
+<wire x1="-81.28" y1="58.42" x2="-71.12" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="58.42" x2="-38.1" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="58.42" x2="-38.1" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="63.5" x2="-81.28" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="C3" gate="&gt;NAME" pin="2"/>
+<pinref part="AZ1117CH5.0" gate="G$1" pin="ADJ/GND"/>
+<wire x1="-71.12" y1="71.12" x2="-71.12" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-71.12" y="58.42"/>
+<wire x1="-81.28" y1="58.42" x2="-88.9" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-81.28" y="58.42"/>
+<pinref part="R5" gate="&gt;NAME" pin="1"/>
+<wire x1="-88.9" y1="58.42" x2="-88.9" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="-88.9" y1="55.88" x2="-88.9" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-88.9" y="58.42"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -1979,10 +1942,9 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <wire x1="73.66" y1="53.34" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="IR2301PBF-ND_1" gate="G$1" pin="VS"/>
 <wire x1="73.66" y1="63.5" x2="71.12" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="48.26" x2="109.22" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="53.34" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="53.34" x2="109.22" y2="50.8" width="0.1524" layer="91"/>
-<junction x="109.22" y="53.34"/>
+<wire x1="96.52" y1="48.26" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="55.88" x2="109.22" y2="50.8" width="0.1524" layer="91"/>
+<junction x="109.22" y="55.88"/>
 <wire x1="111.76" y1="50.8" x2="109.22" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="55.88" x2="129.54" y2="55.88" width="0.1524" layer="91"/>
 <label x="129.54" y="55.88" size="1.778" layer="95" xref="yes"/>
@@ -2048,6 +2010,15 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <wire x1="-78.74" y1="-60.96" x2="-78.74" y2="-58.42" width="0.1524" layer="91"/>
 <label x="-78.74" y="-58.42" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
+<segment>
+<pinref part="AZ1117CH5.0" gate="G$1" pin="OUT"/>
+<wire x1="-45.72" y1="71.12" x2="-38.1" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="C2" gate="&gt;NAME" pin="1"/>
+<wire x1="-38.1" y1="68.58" x2="-38.1" y2="71.12" width="0.1524" layer="91"/>
+<label x="-30.48" y="71.12" size="1.778" layer="95" xref="yes"/>
+<wire x1="-38.1" y1="71.12" x2="-30.48" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-38.1" y="71.12"/>
+</segment>
 </net>
 <net name="AREF" class="0">
 <segment>
@@ -2056,13 +2027,9 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <label x="-30.48" y="-25.4" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="124.46" y1="48.26" x2="124.46" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="50.8" x2="129.54" y2="50.8" width="0.1524" layer="91"/>
-<junction x="124.46" y="50.8"/>
+<wire x1="121.92" y1="50.8" x2="129.54" y2="50.8" width="0.1524" layer="91"/>
 <label x="129.54" y="50.8" size="1.778" layer="95" xref="yes"/>
 <pinref part="R4" gate="&gt;NAME" pin="2"/>
-<pinref part="R5" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="BREF" class="0">
@@ -2072,13 +2039,9 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <label x="-30.48" y="-20.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="124.46" y1="-10.16" x2="124.46" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-7.62" x2="121.92" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-7.62" x2="129.54" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="124.46" y="-7.62"/>
+<wire x1="121.92" y1="-7.62" x2="129.54" y2="-7.62" width="0.1524" layer="91"/>
 <label x="129.54" y="-7.62" size="1.778" layer="95" xref="yes"/>
 <pinref part="R8" gate="&gt;NAME" pin="2"/>
-<pinref part="R9" gate="&gt;NAME" pin="1"/>
 </segment>
 </net>
 <net name="CREF" class="0">
@@ -2088,50 +2051,25 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <label x="-30.48" y="-15.24" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="124.46" y1="-68.58" x2="124.46" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-66.04" x2="121.92" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-66.04" x2="129.54" y2="-66.04" width="0.1524" layer="91"/>
-<junction x="124.46" y="-66.04"/>
+<wire x1="121.92" y1="-66.04" x2="129.54" y2="-66.04" width="0.1524" layer="91"/>
 <label x="129.54" y="-66.04" size="1.778" layer="95" xref="yes"/>
 <pinref part="R12" gate="&gt;NAME" pin="2"/>
-<pinref part="R13" gate="&gt;NAME" pin="1"/>
-</segment>
-</net>
-<net name="VIN" class="0">
-<segment>
-<pinref part="NANO_SPOT1" gate="G$1" pin="VIN"/>
-<wire x1="-33.02" y1="7.62" x2="-30.48" y2="10.16" width="0.1524" layer="91"/>
-<label x="-30.48" y="10.16" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<wire x1="-45.72" y1="71.12" x2="-38.1" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="71.12" x2="-38.1" y2="68.58" width="0.1524" layer="91"/>
-<junction x="-38.1" y="71.12"/>
-<wire x1="-38.1" y1="71.12" x2="-17.78" y2="71.12" width="0.1524" layer="91"/>
-<label x="-17.78" y="71.12" size="1.778" layer="95" xref="yes"/>
-<pinref part="C2" gate="&gt;NAME" pin="1"/>
-<pinref part="AZ1117CH5.0" gate="G$1" pin="OUT"/>
 </segment>
 </net>
 <net name="POWER" class="0">
 <segment>
-<wire x1="-76.2" y1="71.12" x2="-81.28" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="71.12" x2="-88.9" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="68.58" x2="-81.28" y2="71.12" width="0.1524" layer="91"/>
-<junction x="-81.28" y="71.12"/>
-<wire x1="-88.9" y1="71.12" x2="-88.9" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="C1" gate="&gt;NAME" pin="1"/>
-<wire x1="-99.06" y1="71.12" x2="-99.06" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-88.9" y1="71.12" x2="-99.06" y2="71.12" width="0.1524" layer="91"/>
-<junction x="-88.9" y="71.12"/>
+<wire x1="-76.2" y1="76.2" x2="-81.28" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="71.12" x2="-81.28" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="C3" gate="&gt;NAME" pin="1"/>
-<pinref part="C4" gate="&gt;NAME" pin="1"/>
-<wire x1="-99.06" y1="71.12" x2="-99.06" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-99.06" y="71.12"/>
-<label x="-99.06" y="73.66" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="-76.2" y1="71.12" x2="-76.2" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="AZ1117CH5.0" gate="G$1" pin="IN"/>
 <wire x1="-76.2" y1="76.2" x2="-71.12" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="R9" gate="&gt;NAME" pin="2"/>
+<wire x1="-93.98" y1="76.2" x2="-88.9" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-81.28" y="76.2"/>
+<pinref part="R5" gate="&gt;NAME" pin="2"/>
+<wire x1="-88.9" y1="76.2" x2="-81.28" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="71.12" x2="-88.9" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-88.9" y="76.2"/>
 </segment>
 <segment>
 <pinref part="D3" gate="1" pin="ANODE"/>
@@ -2211,26 +2149,10 @@ Source: http://www.alphapotentiometers.net/html/16mm_pot_2.html</description>
 <label x="-15.24" y="-60.96" size="1.778" layer="95" xref="yes"/>
 <pinref part="R1" gate="&gt;NAME" pin="2"/>
 </segment>
-</net>
-<net name="N$5" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="A"/>
-<wire x1="124.46" y1="38.1" x2="124.46" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="R5" gate="&gt;NAME" pin="2"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="A"/>
-<wire x1="124.46" y1="-20.32" x2="124.46" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="R9" gate="&gt;NAME" pin="2"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U$6" gate="G$1" pin="A"/>
-<wire x1="124.46" y1="-78.74" x2="124.46" y2="-81.28" width="0.1524" layer="91"/>
-<pinref part="R13" gate="&gt;NAME" pin="2"/>
+<pinref part="R9" gate="&gt;NAME" pin="1"/>
+<wire x1="-104.14" y1="76.2" x2="-104.14" y2="68.58" width="0.1524" layer="91"/>
+<label x="-104.14" y="68.58" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$10" class="0">
