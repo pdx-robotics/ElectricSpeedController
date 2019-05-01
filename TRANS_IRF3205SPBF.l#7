@@ -852,8 +852,8 @@ grid 2.54 mm</description>
 <text x="5.08" y="-5.08" size="1.27" layer="25" rot="R90">&gt;Name</text>
 </package>
 <package name="LED_PADS">
-<pad name="P$1" x="-1.27" y="0" drill="1" shape="square"/>
-<pad name="P$2" x="1.27" y="0" drill="1"/>
+<pad name="C" x="-1.27" y="0" drill="1" shape="square"/>
+<pad name="A" x="1.27" y="0" drill="1"/>
 <wire x1="-0.635" y1="1.905" x2="-0.635" y2="1.27" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="1.27" x2="-0.635" y2="0.635" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="0.635" width="0.127" layer="21"/>
@@ -881,6 +881,8 @@ grid 2.54 mm</description>
 <pad name="CATHODE" x="1.27" y="0" drill="0.6" diameter="1.27"/>
 <circle x="0" y="0" radius="3.81" width="0.127" layer="21"/>
 <text x="-3.81" y="0" size="1.27" layer="21">+</text>
+<text x="-2.54" y="-2.54" size="0.6096" layer="27">&gt;VALUE</text>
+<text x="-2.54" y="2.54" size="0.6096" layer="25" align="top-left">&gt;NAME</text>
 </package>
 <package name="CAP_CERAMIC">
 <pad name="ANODE" x="-2.54" y="0" drill="0.6" shape="square"/>
@@ -911,6 +913,8 @@ grid 2.54 mm</description>
 <wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.127" layer="21"/>
 <wire x1="7.62" y1="-10.16" x2="7.62" y2="1.27" width="0.127" layer="21"/>
 <hole x="0" y="-6.35" drill="0.35"/>
+<text x="-3.81" y="-3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="2P_POWER">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
@@ -1039,25 +1043,23 @@ grid 2.54 mm</description>
 <text x="-1.905" y="-2.54" size="0.635" layer="21">VAR</text>
 </package>
 <package name="DIODE">
-<pad name="P$1" x="-5.08" y="0" drill="0.6" diameter="1.9304"/>
-<pad name="P$2" x="5.08" y="0" drill="0.6" diameter="1.9304"/>
+<pad name="A" x="-5.08" y="0" drill="0.6" diameter="1.9304"/>
+<pad name="C" x="5.08" y="0" drill="0.6" diameter="1.9304"/>
 <wire x1="-3.81" y1="0" x2="-4.064" y2="0" width="0.127" layer="21"/>
 <wire x1="3.81" y1="0" x2="4.064" y2="0" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="0.762" x2="-3.81" y2="-0.762" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="-0.762" x2="3.81" y2="-0.762" width="0.127" layer="21"/>
-<wire x1="3.81" y1="-0.762" x2="3.81" y2="0.762" width="0.127" layer="21"/>
-<wire x1="3.81" y1="0.762" x2="-3.81" y2="0.762" width="0.127" layer="21"/>
 <text x="0" y="-2.54" size="1.27" layer="27">&gt;Value</text>
 <text x="-6.35" y="-2.54" size="1.27" layer="25">&gt;Name</text>
-<wire x1="-3.81" y1="2.54" x2="1.27" y2="2.54" width="0.127" layer="21"/>
-<wire x1="1.27" y1="2.54" x2="3.81" y2="2.54" width="0.127" layer="21"/>
-<wire x1="3.81" y1="2.54" x2="1.27" y2="2.54" width="0.127" layer="21"/>
-<wire x1="1.27" y1="2.54" x2="1.27" y2="3.81" width="0.127" layer="21"/>
-<wire x1="1.27" y1="3.81" x2="1.27" y2="2.54" width="0.127" layer="21"/>
-<wire x1="1.27" y1="2.54" x2="1.27" y2="1.27" width="0.127" layer="21"/>
-<wire x1="-1.27" y1="3.81" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
-<wire x1="-1.27" y1="1.27" x2="1.27" y2="2.54" width="0.127" layer="21"/>
-<wire x1="1.27" y1="2.54" x2="-1.27" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.127" layer="21"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-1.27" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
+<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.127" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-1.27" x2="-3.81" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-1.27" x2="-3.81" y2="1.27" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1098,6 +1100,7 @@ grid 2.54 mm</description>
 <vertex x="1.905" y="-0.508"/>
 <vertex x="1.905" y="0.508"/>
 </polygon>
+<text x="7.62" y="-5.08" size="1.27" layer="96" rot="R90">&gt;VALUE</text>
 </symbol>
 <symbol name="RESISTOR">
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
@@ -1554,15 +1557,15 @@ grid 2.54 mm</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LED" uservalue="yes">
+<deviceset name="LED" prefix="LED" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="LED" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="LED_PADS">
 <connects>
-<connect gate="G$1" pin="A" pad="P$1"/>
-<connect gate="G$1" pin="C" pad="P$2"/>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1696,12 +1699,16 @@ grid 2.54 mm</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="DIODE">
+<deviceset name="DIODE" prefix="D">
 <gates>
 <gate name="G$1" symbol="D" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="DIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
